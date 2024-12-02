@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "day1": "NODE_NO_WARNINGS=1 node --test --watch --experimental-strip-types --experimental-transform-types src/day1/index.test.ts"
+    "day1": "NODE_NO_WARNINGS=1 node --test --watch --experimental-strip-types --experimental-transform-types src/day1/index.test.ts",
+    "day2": "NODE_NO_WARNINGS=1 node --test --watch --experimental-strip-types --experimental-transform-types src/day2/index.test.ts",
+    "test:all": "NODE_NO_WARNINGS=1 node --test --watch --experimental-strip-types --experimental-transform-types src/**/*.test.ts"
   },
   "keywords": [],
   "author": "",
