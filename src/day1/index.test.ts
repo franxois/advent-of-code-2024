@@ -1,6 +1,8 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { input as inputDay1 } from "./input.ts";
+import { readFileSync } from "node:fs";
+
+const inputDay = readFileSync(new URL("./input.txt", import.meta.url), "utf8");
 
 const parseLines = (input: string) => {
   const lefts: number[] = [];
@@ -62,12 +64,12 @@ describe("day1", () => {
   it("distance", () => {
     assert.equal(distance(input), 11);
 
-    console.log("result 1", distance(inputDay1));
+    console.log("result 1", distance(inputDay));
   });
 
   it("similarity", () => {
     assert.equal(similarity(input), 31);
 
-    console.log("result 2", similarity(inputDay1));
+    console.log("result 2", similarity(inputDay));
   });
 });

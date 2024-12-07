@@ -1,6 +1,8 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { input as inputDay2 } from "./input.ts";
+import { readFileSync } from "node:fs";
+
+const inputDay = readFileSync(new URL("./input.txt", import.meta.url), "utf8");
 
 const parseLines = (input: string) => {
   return input.split("\n").map((line) => line.split(" ").map(Number));
@@ -69,16 +71,16 @@ describe("day2", () => {
   it("step1", () => {
     assert.equal(safeCount(input), 2);
 
-    console.log("result 1", safeCount(inputDay2));
+    console.log("result 1", safeCount(inputDay));
 
-    assert.equal(safeCount(inputDay2), 407);
+    assert.equal(safeCount(inputDay), 407);
   });
 
   it("step2", () => {
     assert.equal(safeCount2(input), 4);
 
-    console.log("result 2", safeCount2(inputDay2));
+    console.log("result 2", safeCount2(inputDay));
 
-    assert.equal(safeCount2(inputDay2), 459);
+    assert.equal(safeCount2(inputDay), 459);
   });
 });
